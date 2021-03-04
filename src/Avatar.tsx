@@ -110,6 +110,7 @@ export default class Avatar<
                 this.props.imageStyle[this.props.position],
             ] as ImageStyle
           }
+          blur={this.props.blur}
           textStyle={this.props.textStyle ? this.props.textStyle : {}}
           user={this.props.currentMessage.user}
           onPress={() =>

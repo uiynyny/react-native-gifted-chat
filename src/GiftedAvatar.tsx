@@ -106,7 +106,7 @@ export default class GiftedAvatar extends React.Component<GiftedAvatarProps> {
   }
 
   renderAvatar() {
-    const { user } = this.props
+    const { user,blur } = this.props
     if (user) {
       if (typeof user.avatar === 'function') {
         return user.avatar([styles.avatarStyle, this.props.avatarStyle])
@@ -114,6 +114,7 @@ export default class GiftedAvatar extends React.Component<GiftedAvatarProps> {
         return (
           <Image
             source={{ uri: user.avatar }}
+            blurRadius={blur}
             style={[styles.avatarStyle, this.props.avatarStyle]}
           />
         )
@@ -121,6 +122,7 @@ export default class GiftedAvatar extends React.Component<GiftedAvatarProps> {
         return (
           <Image
             source={user.avatar}
+            blurRadius={blur}
             style={[styles.avatarStyle, this.props.avatarStyle]}
           />
         )
