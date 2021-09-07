@@ -47,6 +47,7 @@ export interface GiftedAvatarProps {
   user?: User
   avatarStyle?: StyleProp<ImageStyle>
   textStyle?: StyleProp<TextStyle>
+  blur:number
   onPress?(props: any): void
   onLongPress?(props: any): void
 }
@@ -61,6 +62,7 @@ export default class GiftedAvatar extends React.Component<GiftedAvatarProps> {
     onLongPress: undefined,
     avatarStyle: {},
     textStyle: {},
+    blur:0
   }
 
   static propTypes = {

@@ -50,6 +50,7 @@ export interface AvatarProps<TMessage extends IMessage> {
   renderAvatarOnTop?: boolean
   showAvatarForEveryMessage?: boolean
   imageStyle?: LeftRightStyle<ImageStyle>
+  blur:number
   containerStyle?: LeftRightStyle<ViewStyle>
   textStyle?: TextStyle
   renderAvatar?(props: Omit<AvatarProps<TMessage>, 'renderAvatar'>): ReactNode
@@ -71,6 +72,7 @@ export default class Avatar<
     nextMessage: {},
     containerStyle: {},
     imageStyle: {},
+    blur:0,
     onPressAvatar: () => {},
     onLongPressAvatar: () => {},
   }
